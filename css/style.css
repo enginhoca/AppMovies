@@ -13,7 +13,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
 }
 
 .main-header {
@@ -24,7 +24,7 @@ body {
     padding: 8px 16px;
     height: 70px;
     position: fixed;
-    width: 90%;
+    width: 80%;
 }
 
 .main-header-logo {
@@ -66,7 +66,7 @@ body {
     padding: 10px;
     width: 100%;
     height: 80vh;
-    margin-top: 10px;
+    margin-top: 70px;
 }
 
 #showcase .content {
@@ -161,71 +161,46 @@ body {
     margin: 6px 0;
 }
 
+/* Responsive yapıya göre tasarım */
 
-/* Tarayıcı genişliği 632px altında ise bu kodlar çalışır. */
-@media (max-width: 632px) {
+/* Tarayıcının genişliği 0-700px arasındayken buraya yazacağımız kodlar çalışacaktır */
+@media (max-width: 700px) {
     .main-header {
         flex-direction: column;
-        height: auto;
+        width: 100%;
     }
 
-    .main-nav {
-        margin-top: 20px;
-    }
-
-    .main-nav-items {
-        flex-direction: column;
+    .container {
+        width: 100%;
     }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 900px) {
+    #showcase {
+        height: 50vh;
+    }
+
     #showcase .content h1 {
-        font-size: 35px;
+        font-size: 25px;
     }
 
     #showcase .content h2 {
         font-size: 20px;
     }
-}
 
-@media (max-width: 650px) {
     #showcase .content {
         padding: 20px;
     }
-
-    #showcase .content h1 {
-        font-size: 20px;
-    }
-
-    #showcase .content h2 {
-        font-size: 12px;
-    }
-
 }
 
-@media (max-width: 860px) {
-    .row {
+@media (max-width: 1000px) {
+    .hiw-row {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-
     }
 
-    .col-3 {
-        width: 80% !important;
+    .hiw-row .col-3 {
+        width: 100%;
         margin-bottom: 30px;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
     }
-
-    .features-left {
-        height: 200px;
-    }
-
-    .recommended-plan {
-        order: -1;
-    }
-
-
-
 }
